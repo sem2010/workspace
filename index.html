@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>구글 워크스페이스 사용법</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>구글 워크스페이스 첫걸음</title>
+  <meta name="description" content="구글 첫 로그인, 클래스룸, 문서/시트 사용 안내 튜토리얼" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+</head>
+<body>
+  <!-- 전체 레이아웃 -->
+  <header class="site-header">
+    <button class="btn icon-only" id="menuToggle" aria-label="사이드바 열기/닫기">☰</button>
+    <h1 class="site-title">구글 워크스페이스 첫걸음</h1>
+
+    <div class="header-actions">
+      <button class="btn" id="darkToggle" aria-pressed="false">🌙 다크모드</button>
+      <label class="search">
+        <span class="sr-only">검색</span>
+        <input type="search" id="searchInput" placeholder="검색: 예) 클래스룸 코드" />
+      </label>
+    </div>
+  </header>
+
+  <div class="container">
+    <!-- 사이드 내비 -->
+    <nav class="sidebar" id="sidebar" aria-label="섹션 내비게이션">
+      <div class="sidebar-inner">
+        <div class="brand">빠른 이동</div>
+        <ol class="toc" id="toc">
+          <li><a href="#intro">시작하기 (체크리스트)</a></li>
+          <li><a href="#login">① 구글 첫 로그인</a></li>
+          <li><a href="#classroom">② 클래스룸 입장 & 과제</a></li>
+          <li><a href="#drive">③ 드라이브 기본</a></li>
+          <li><a href="#docs">④ 문서(Docs) 작성</a></li>
+          <li><a href="#sheets">⑤ 시트(Sheets) 작성</a></li>
+          <li><a href="#shortcuts">⑥ 키보드 단축키</a></li>
+          <li><a href="#faq">자주 묻는 질문(FAQ)</a></li>
+        </ol>
+
+        <div class="mini-help">
+          <details>
+            <summary>사이트 사용법</summary>
+            <ul>
+              <li>좌측 목차로 원하는 섹션으로 이동</li>
+              <li>완료한 단계는 체크 ✅ → 저장됨</li>
+              <li>오른쪽 상단 검색으로 키워드 찾기</li>
+              <li>어두운 테마가 필요하면 🌙</li>
+            </ul>
+          </details>
+        </div>
+      </div>
+    </nav>
+
+    <!-- 본문 -->
+    <main class="content">
+      <!-- 안내/체크리스트 -->
+      <section id="intro" class="section">
+        <h2>시작하기 ✅ 체크리스트</h2>
+        <p class="lead">아래 항목을 하나씩 완료해 보세요. 체크 내역은 이 브라우저에 저장됩니다.</p>
+
+        <div class="checklist" data-key="startupChecklist">
+          <label class="check"><input type="checkbox" value="login"> 학교 G메일 주소/초기 비밀번호 확인</label>
+          <label class="check"><input type="checkbox" value="firstLogin"> 첫 로그인 & 비밀번호 변경</label>
+          <label class="check"><input type="checkbox" value="classroomJoin"> 클래스룸 입장 & 수업 코드 등록</label>
+          <label class="check"><input type="checkbox" value="drive"> 드라이브 폴더 만들기(과목/날짜)</label>
+          <label class="check"><input type="checkbox" value="docs"> Docs로 과제 표지 작성</label>
+          <label class="check"><input type="checkbox" value="sheets"> Sheets로 표 만들고 공유</label>
+        </div>
+      </section>
+
+      <!-- 첫 로그인 -->
+      <section id="login" class="section">
+        <h2>① 구글 첫 로그인</h2>
+        <div class="grid">
+          <article class="card">
+            <h3>1) 계정 정보 확인</h3>
+            <ol class="steps">
+              <li>학교에서 받은 <strong>구글 계정</strong>과 <strong>임시 비밀번호</strong>를 준비하세요.</li>
+              <li>컴퓨터/태블릿에서 <strong>Chrome</strong>을 열고 <strong>사생활 모드</strong>(Ctrl+Shift+N) 권장.</li>
+            </ol>
+            <div class="tip">💡 다른 계정이 로그인되어 있다면, 우측 상단 프로필에서 <em>로그아웃</em> 후 진행하세요.</div>
+          </article>
+
+          <article class="card">
+            <h3>2) 로그인 & 비밀번호 변경</h3>
+            <ol class="steps">
+              <li><a class="link" href="https://accounts.google.com/" target="_blank" rel="noopener">accounts.google.com</a> 접속</li>
+              <li>학교 G메일 주소 입력 → 임시 비밀번호 입력</li>
+              <li>요청 시 <strong>새 비밀번호</strong>로 변경 (8자 이상, 추천: 영문 대·소문자+숫자)</li>
+              <li>2단계 인증이 설정된 학교라면 가이드에 따라 진행</li>
+            </ol>
+            <figure class="placeholder">
+              <div class="ph-img">로그인 화면 예시 (이미지 자리)</div>
+              <figcaption>※ 실제 화면은 학교 정책에 따라 다를 수 있어요.</figcaption>
+            </figure>
+          </article>
+
+          <article class="card">
+            <h3>3) 프로필/언어/시간대 설정</h3>
+            <ol class="steps">
+              <li>우측 상단 프로필 → <strong>Google 계정 관리</strong></li>
+              <li>개인정보의 <strong>언어/시간대</strong>를 한국어/서울(UTC+9)로 확인</li>
+              <li>프로필 사진 등록(선택)</li>
+            </ol>
+          </article>
+        </div>
+      </section>
+
+      <!-- 클래스룸 -->
+      <section id="classroom" class="section">
+        <h2>② 클래스룸 입장 & 과제</h2>
+        <div class="grid">
+          <article class="card">
+            <h3>1) 수업 참여</h3>
+            <ol class="steps">
+              <li><a class="link" href="https://classroom.google.com" target="_blank" rel="noopener">classroom.google.com</a> 접속</li>
+              <li><strong>＋ 참여</strong> → <strong>수업 코드</strong> 입력</li>
+              <li>수업 카드가 보이면 입장</li>
+            </ol>
+          </article>
+
+          <article class="card">
+            <h3>2) 과제 확인 & 제출</h3>
+            <ol class="steps">
+              <li><strong>스트림</strong>에서 공지 확인, <strong>과제</strong> 탭에서 과제 목록 확인</li>
+              <li>과제 열기 → <strong>첨부파일</strong> 추가(드라이브, 링크, 파일 업로드 등)</li>
+              <li><strong>제출</strong> 클릭 (필요 시 <em>제출 취소</em> 후 파일 수정 가능)</li>
+            </ol>
+            <details class="accordion">
+              <summary>파일 형식 팁</summary>
+              <ul>
+                <li>문서는 <strong>Google Docs</strong>, 표는 <strong>Sheets</strong>, 발표는 <strong>Slides</strong> 권장</li>
+                <li>사진/동영상 업로드 시 용량이 크면 <strong>드라이브 링크</strong> 공유</li>
+              </ul>
+            </details>
+          </article>
+
+          <article class="card">
+            <h3>3) 알림 & 댓글 예절</h3>
+            <ul class="bullets">
+              <li>과제 마감 알림: 클래스룸 우측 상단 종 모양 아이콘</li>
+              <li>개별 댓글은 <strong>교사-학생</strong> 1:1 소통, <strong>공개 댓글</strong>은 모두가 보니 예의있게</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- 드라이브 -->
+      <section id="drive" class="section">
+        <h2>③ 드라이브 기본</h2>
+        <div class="grid">
+          <article class="card">
+            <h3>1) 폴더 정리 규칙</h3>
+            <ul class="bullets">
+              <li><strong>학년/과목/날짜</strong> 기준으로 폴더 생성 (예: <code>1학년/과학/2025-09/</code>)</li>
+              <li>공유가 필요한 폴더는 <strong>공유 설정</strong>에서 권한(보기/편집) 확인</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>2) 업로드 & 공유</h3>
+            <ol class="steps">
+              <li>드라이브 열기 → <strong>새로 만들기</strong> → 폴더/파일 업로드</li>
+              <li>파일 우클릭 → <strong>링크 공유</strong> → 권한 설정(제한/링크가 있는 모든 사용자)</li>
+              <li>클래스룸 과제에 링크 첨부하기</li>
+            </ol>
+          </article>
+        </div>
+      </section>
+
+      <!-- Docs -->
+      <section id="docs" class="section">
+        <h2>④ 문서(Docs) 작성</h2>
+        <div class="grid">
+          <article class="card">
+            <h3>1) 새 문서 만들기</h3>
+            <ol class="steps">
+              <li>드라이브 → <strong>새로 만들기</strong> → Google 문서</li>
+              <li>제목 클릭해 문서 이름 바꾸기 (예: <code>과학_탐구보고서_홍길동</code>)</li>
+            </ol>
+          </article>
+
+          <article class="card">
+            <h3>2) 서식 빠르게 맞추기</h3>
+            <ul class="bullets">
+              <li><strong>스타일</strong>에서 제목/부제/본문 통일</li>
+              <li><strong>삽입</strong> → 표/이미지/페이지번호 활용</li>
+              <li><strong>공유</strong> → 보기/댓글/편집 권한 설정</li>
+            </ul>
+            <details class="accordion">
+              <summary>제출용 표지 예시</summary>
+              <pre class="snippet">
+제목: ○○보고서
+이름: ○○○(학번 ○번)
+과목: 과학
+제출일: 2025-09-15
+              </pre>
+            </details>
+          </article>
+        </div>
+      </section>
+
+      <!-- Sheets -->
+      <section id="sheets" class="section">
+        <h2>⑤ 시트(Sheets) 작성</h2>
+        <div class="grid">
+          <article class="card">
+            <h3>1) 새 시트 만들기</h3>
+            <ol class="steps">
+              <li>드라이브 → <strong>새로 만들기</strong> → Google 스프레드시트</li>
+              <li>제목을 <code>과학_자료정리_홍길동</code> 처럼 구체적으로</li>
+            </ol>
+          </article>
+
+          <article class="card">
+            <h3>2) 자주 쓰는 기능</h3>
+            <ul class="bullets">
+              <li>열 너비 맞춤: 열 머리글 더블클릭</li>
+              <li>첫 행 고정: 보기 → 고정 → 1개 행</li>
+              <li>정렬: 데이터 → 정렬 조건</li>
+            </ul>
+            <details class="accordion">
+              <summary>기본 수식 예시</summary>
+              <pre class="snippet">
+=SUM(B2:B10)         합계
+=AVERAGE(C2:C20)     평균
+=COUNTIF(D2:D100,"제출")  '제출' 개수
+=IF(E2>=60,"합격","재제출")
+              </pre>
+            </details>
+          </article>
+
+          <article class="card">
+            <h3>3) 공유 & 제출</h3>
+            <ol class="steps">
+              <li>오른쪽 상단 <strong>공유</strong> → 사용자 추가 또는 링크 공유</li>
+              <li>클래스룸 과제에 링크 첨부 → <strong>제출</strong></li>
+            </ol>
+          </article>
+        </div>
+      </section>
+
+      <!-- 단축키 -->
+      <section id="shortcuts" class="section">
+        <h2>⑥ 키보드 단축키 (유용!)</h2>
+        <div class="grid">
+          <article class="card">
+            <h3>공통</h3>
+            <ul class="mono-list">
+              <li>복사: <kbd>Ctrl</kbd>+<kbd>C</kbd> / 붙여넣기: <kbd>Ctrl</kbd>+<kbd>V</kbd></li>
+              <li>실행 취소: <kbd>Ctrl</kbd>+<kbd>Z</kbd> / 다시 실행: <kbd>Ctrl</kbd>+<kbd>Y</kbd></li>
+              <li>검색: <kbd>Ctrl</kbd>+<kbd>F</kbd></li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Docs</h3>
+            <ul class="mono-list">
+              <li>굵게: <kbd>Ctrl</kbd>+<kbd>B</kbd>, 기울임: <kbd>Ctrl</kbd>+<kbd>I</kbd></li>
+              <li>머리말 적용: <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>1</kbd>~<kbd>6</kbd></li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Sheets</h3>
+            <ul class="mono-list">
+              <li>현재 날짜: <kbd>Ctrl</kbd>+<kbd>;</kbd></li>
+              <li>행/열 추가: <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>=</kbd></li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section id="faq" class="section">
+        <h2>자주 묻는 질문 (FAQ)</h2>
+
+        <details class="accordion">
+          <summary>클래스룸 수업 코드가 안 된대요.</summary>
+          <p>코드를 정확히 입력했는지 확인하고, 학교 계정으로 로그인했는지 점검하세요. 여전히 안 되면 선생님께 코드/권한을 확인 요청하세요.</p>
+        </details>
+
+        <details class="accordion">
+          <summary>파일을 올리면 용량이 너무 커요.</summary>
+          <p>동영상은 드라이브에 올리고 <strong>링크</strong>를 첨부하세요. 이미지도 압축해서 올리면 좋아요.</p>
+        </details>
+
+        <details class="accordion">
+          <summary>문서/시트가 편집이 안 돼요.</summary>
+          <p>공유 권한이 <em>보기</em>로 되어 있을 수 있어요. 소유자에게 <strong>편집 권한</strong>을 요청하세요.</p>
+        </details>
+
+        <div class="foot-note">
+          ⓘ 학교 정책에 따라 화면/메뉴가 다를 수 있습니다. 문제가 지속되면 담임/과목 교사에게 알려주세요.
+        </div>
+      </section>
+
+      <footer class="site-footer">
+        <button class="btn" id="scrollTop">맨 위로 ↑</button>
+        <span>© 2025 구글 워크스페이스 안내</span>
+      </footer>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
